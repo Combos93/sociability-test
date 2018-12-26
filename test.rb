@@ -6,7 +6,6 @@ class Test
     file = File.new(questions_path, "r:UTF-8")
     @questions = file.readlines
     file.close
-
     @points = 0
     @current_question = 0
   end
@@ -23,7 +22,7 @@ class Test
       puts "введите число: 1 – да, 2 – нет, 3 – иногда, и нажмите Enter"
       user_input = gets.to_i
     end
-
+    
     if user_input == 1
       @points += 2
     elsif user_input == 3
@@ -31,13 +30,8 @@ class Test
     end
     @current_question += 1
   end
-
+  
   def points
     return @points
   end
 end
-
-
-
-
-
